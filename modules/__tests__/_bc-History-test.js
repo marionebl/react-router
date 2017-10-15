@@ -1,5 +1,6 @@
 import expect from 'expect'
 import React from 'react'
+import createReactClass from 'create-react-class'
 import { render, unmountComponentAtNode } from 'react-dom'
 import History from '../History'
 import Router from '../Router'
@@ -26,7 +27,7 @@ describe('v1 History Mixin', function () {
 
     const history = createHistory('/')
 
-    const Component = React.createClass({
+    const Component = createReactClass({
       mixins: [ History ],
       componentWillMount() {
         expect(this.history).toExist()

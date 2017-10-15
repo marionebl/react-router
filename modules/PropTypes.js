@@ -1,4 +1,4 @@
-import { PropTypes } from 'react'
+import PropTypes from 'prop-types'
 
 import deprecateObjectProperties from './deprecateObjectProperties'
 import * as InternalPropTypes from './InternalPropTypes'

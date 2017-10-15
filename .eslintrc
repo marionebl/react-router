@@ -5,7 +5,8 @@
   },
   "rules": {
     "react/display-name": 0,
-    "react/wrap-multilines": 2
+    "react/wrap-multilines": 2,
+    "react/prop-types": 0
   },
   "plugins": [
     "react"

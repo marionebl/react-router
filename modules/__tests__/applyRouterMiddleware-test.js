@@ -1,4 +1,6 @@
+import createReactClass from 'create-react-class'
 import expect from 'expect'
+import PropTypes from 'prop-types'
 import React, { cloneElement } from 'react'
 import { render } from 'react-dom'
 import Router from '../Router'
@@ -10,18 +12,18 @@ const FOO_ROOT_CONTAINER_TEXT = 'FOO ROOT CONTAINER'
 const BAR_ROOT_CONTAINER_TEXT = 'BAR ROOT CONTAINER'
 const BAZ_CONTAINER_TEXT = 'BAZ INJECTED'
 
-const FooRootContainer = React.createClass({
-  propTypes: { children: React.PropTypes.node.isRequired },
-  childContextTypes: { foo: React.PropTypes.string },
+const FooRootContainer = createReactClass({
+  propTypes: { children: PropTypes.node.isRequired },
+  childContextTypes: { foo: PropTypes.string },
   getChildContext() { return { foo: FOO_ROOT_CONTAINER_TEXT } },
   render() {
     return this.props.children
   }
 })
 
-const FooContainer = React.createClass({
-  propTypes: { children: React.PropTypes.node.isRequired },
-  contextTypes: { foo: React.PropTypes.string.isRequired },
+const FooContainer = createReactClass({
+  propTypes: { children: PropTypes.node.isRequired },
+  contextTypes: { foo: PropTypes.string.isRequired },
   render() {
     const { children, ...props } = this.props
     const fooFromContext = this.context.foo
@@ -38,18 +40,18 @@ const useFoo = () => ({
   )
 })
 
-const BarRootContainer = React.createClass({
-  propTypes: { children: React.PropTypes.node.isRequired },
-  childContextTypes: { bar: React.PropTypes.string },
+const BarRootContainer = createReactClass({
+  propTypes: { children: PropTypes.node.isRequired },
+  childContextTypes: { bar: PropTypes.string },
   getChildContext() { return { bar: BAR_ROOT_CONTAINER_TEXT } },
   render() {
     return this.props.children
   }
 })
 
-const BarContainer = React.createClass({
-  propTypes: { children: React.PropTypes.node.isRequired },
-  contextTypes: { bar: React.PropTypes.string.isRequired },
+const BarContainer = createReactClass({
+  propTypes: { children: PropTypes.node.isRequired },
+  contextTypes: { bar: PropTypes.string.isRequired },
   render() {
     const { children, ...props } = this.props
     const barFromContext = this.context.bar

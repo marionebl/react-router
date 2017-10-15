@@ -1,3 +1,4 @@
+import createReactClass from 'create-react-class'
 import React from 'react'
 import hoistStatics from 'hoist-non-react-statics'
 import { routerShape } from './PropTypes'
@@ -7,7 +8,7 @@ function getDisplayName(WrappedComponent) {
 }
 
 export default function withRouter(WrappedComponent) {
-  const WithRouter = React.createClass({
+  const WithRouter = createReactClass({
     contextTypes: { router: routerShape },
     render() {
       return <WrappedComponent {...this.props} router={this.context.router} />
