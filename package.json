@@ -1,5 +1,5 @@
 {
-  "name": "react-router",
+  "name": "@marionebl/react-router",
   "version": "2.6.1",
   "description": "A complete routing library for React",
   "files": [
