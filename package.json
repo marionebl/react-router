@@ -32,6 +32,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "create-react-class": "^15.6.3",
     "history": "^2.1.2",
     "hoist-non-react-statics": "^1.2.0",
     "invariant": "^2.2.1",
