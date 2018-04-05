@@ -1,6 +1,6 @@
 {
   "name": "@marionebl/react-router",
-  "version": "2.6.2",
+  "version": "2.6.3",
   "description": "A complete routing library for React",
   "files": [
     "*.md",
