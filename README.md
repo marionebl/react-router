@@ -33,7 +33,7 @@ We support all browsers and environments where React runs.
 
 Using [npm](https://www.npmjs.com/):
 
-    $ npm install --save react-router
+    $ npm install --save @marionebl/react-router
 
 Then with a module bundler like [webpack](https://webpack.github.io/) that supports either CommonJS or ES2015 modules, use as you would anything else:
 
